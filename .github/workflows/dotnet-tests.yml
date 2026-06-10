@@ -52,4 +52,3 @@ steps:
       name: screenshots
       path: '**/Screenshots/*.png'
       if-no-files-found: ignore
-```
