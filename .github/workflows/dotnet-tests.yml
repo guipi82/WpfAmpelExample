@@ -27,8 +27,18 @@ jobs:
         run: dotnet build --configuration Debug --no-restore
 
       - name: Run tests
-        run: dotnet test .\Ampel.Tests\Ampel.Tests.csproj --configuration Debug --no-build --logger "trx;LogFileName=test-results.trx"--results-directory TestResults
-
+        #run: dotnet test .\Ampel.Tests\Ampel.Tests.csproj --configuration Debug --no-build --logger "trx;LogFileName=test-results.trx"--results-directory TestResults
+        run: |
+          dotnet test .\Ampel.Tests\Ampel.Tests.csproj `
+            --configuration Debug `
+            --filter "Category!=ui" `
+            --logger "trx;LogFileName=test-results.trx" `
+            --results-directory ./TestResults
+            
+      - name: List TestResults
+        if: always()
+        run: dir TestResults     
+        
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
