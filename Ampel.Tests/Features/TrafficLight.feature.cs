@@ -112,140 +112,121 @@ As a user
 I want to control the traffic light
 So that I can switch between red, yellow and green
 
+@yellow
 Scenario: Switch to yellow
     Given the traffic light application is running
     When I click the ""Yellow"" button
     Then the traffic light should show ""Yellow""
 
+@green
 Scenario: Switch to green
     Given the traffic light application is running
     When I click the ""Green"" button
     Then the traffic light should show ""Green""
 
+@red
 Scenario: Switch back to red
     Given the traffic light application is running
     When I click the ""Red"" button
     Then the traffic light should show ""Red""
 
+@automatic
 Scenario: Switch to Automatic modus
     Given the traffic light application is running
     When I click the Automatic button
     Then the traffic light should show different colors in a loop
 
+@stopautomatic
 Scenario: Stop Automatic modus
     Given the traffic light application is running
     When I click the Automatic button
     When I click the Automatic button again
     Then the traffic light should show stop changing colors
-
-
-Scenario: UI smoke test application starts
-    Given the WPF application is started
-    Then the main window should be visible
-
-Scenario: UI smoke test application starts and click the Green Button
-    Given the WPF application is started
-    Then the main window should be visible
-    When I click the ""Green"" button
-    Then the color green will be shown on the the traffic", global::Io.Cucumber.Messages.Types.SourceMediaType.TEXT_X_CUCUMBER_GHERKIN_PLAIN);
+", global::Io.Cucumber.Messages.Types.SourceMediaType.TEXT_X_CUCUMBER_GHERKIN_PLAIN);
         }
         
         private static global::Io.Cucumber.Messages.Types.GherkinDocument GherkinDocumentFunc()
         {
             return new global::Io.Cucumber.Messages.Types.GherkinDocument("Features/TrafficLight.feature", new global::Io.Cucumber.Messages.Types.Feature(new global::Io.Cucumber.Messages.Types.Location(1, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "en-US", "Feature", "Traffic Light", "As a user\r\nI want to control the traffic light\r\nSo that I can switch between red," +
                         " yellow and green", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.FeatureChild>(new global::Io.Cucumber.Messages.Types.FeatureChild[] {
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(7, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "Switch to yellow", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(8, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "6f0b35c386987a5889cc5783994f11a0"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(9, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Yellow\" button", null, null, "baf7fbe07bdb9a59bec54aba199dd178"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(10, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show \"Yellow\"", null, null, "381735bf0847645f833a40c072793203")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "0840ec3c1b8d3c509f9bc93bb279a1c9")),
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(12, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "Switch to green", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(13, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "a15c49b4a628f25fb01dd6179419482e"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(14, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Green\" button", null, null, "8262fbac8229dd51ab5ddb78be76c92a"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(15, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show \"Green\"", null, null, "c7b6ec5c7e82085488452842cec8d531")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "8a2f0d4718e09555b378e1b935c22ffd")),
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(17, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "Switch back to red", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(18, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "14de3792e76a25559822576bbfae81a8"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(19, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Red\" button", null, null, "bf2a2ba823ad2753a68d173fa6f3374d"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(20, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show \"Red\"", null, null, "a36f9f20c6a0085bbd544f07dea3e837")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "bd872a69117dd25ca14fe27aa2beb1a3")),
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(22, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "Switch to Automatic modus", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(23, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "c84fb878ee164652a39aaf586ae33faf"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(24, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the Automatic button", null, null, "bb5fc00fcc7a8959bbf86ff7d18b9d96"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(25, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show different colors in a loop", null, null, "84b1aa2e4287db5b8e7ccf001c5bbae0")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "bdaff63e6f26bc519cc0b59c1aa3cfee")),
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(27, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "Stop Automatic modus", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(28, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "ddb88b76912b1056b7a9ee8abce79e81"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(29, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the Automatic button", null, null, "cbe052bff443b45596891702666da5ee"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(30, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the Automatic button again", null, null, "3ff3af4c84c6795eb754e9f123ab451b"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(31, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show stop changing colors", null, null, "64de5e51af3cef59ad9727a20a199c4f")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "97146eadaa92995c914545a8abcfaf63")),
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(34, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "UI smoke test application starts", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(35, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the WPF application is started", null, null, "d4316a40573eb051883d25d538101e4f"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(36, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the main window should be visible", null, null, "b85fdb710f42515ebb490fb6b0b2286c")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "92c3817f6c1a9d57beb0a661b554f34b")),
-                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(38, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[0]), "Scenario", "UI smoke test application starts and click the Green Button", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(39, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the WPF application is started", null, null, "11480315251b6f54bd2530657f78e29d"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(40, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the main window should be visible", null, null, "3e3e8ce773efc05ca4afd933d270c7d3"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(41, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Green\" button", null, null, "fd068f9ffc33f55c8fea6297c1cd1fa2"),
-                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(42, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the color green will be shown on the the traffic", null, null, "8df114ce0bf86d5bbb09047cc54fad12")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "49d02492ab08605b8014fc07d5a6db5d"))})), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Comment>(new global::Io.Cucumber.Messages.Types.Comment[0]));
+                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(8, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[] {
+                                                    new global::Io.Cucumber.Messages.Types.Tag(new global::Io.Cucumber.Messages.Types.Location(7, new System.Nullable<long>(1)), "@yellow", "f9ef76f12167c851b879bb558ea45690")}), "Scenario", "Switch to yellow", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(9, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "ce83b84bcd616159ab5b6cb92cde0b5d"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(10, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Yellow\" button", null, null, "5d7f2e2143d8d458bbf6022aa5691e8b"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(11, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show \"Yellow\"", null, null, "410403e5b51db1538ecdad8633222d9c")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "5b14c93ed94359558ec0db19f4ee7985")),
+                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(14, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[] {
+                                                    new global::Io.Cucumber.Messages.Types.Tag(new global::Io.Cucumber.Messages.Types.Location(13, new System.Nullable<long>(1)), "@green", "925d63ffddef1b5d9040caf79aadd13f")}), "Scenario", "Switch to green", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(15, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "ec7c679c1d68f757bc8ef16fcdbb3ec3"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(16, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Green\" button", null, null, "eb44a913a411e9569f81aeb4fe7768c4"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(17, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show \"Green\"", null, null, "0e3e7d26654c1655980b47d45890294b")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "aafc332aa5f706559f6fb24e9c867b66")),
+                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(20, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[] {
+                                                    new global::Io.Cucumber.Messages.Types.Tag(new global::Io.Cucumber.Messages.Types.Location(19, new System.Nullable<long>(1)), "@red", "be0f8c0301741658a4de42dfdb47cbb2")}), "Scenario", "Switch back to red", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(21, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "309e7f681e6c8d56955d5db099374670"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(22, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the \"Red\" button", null, null, "9172e0f20bebb05eb84c42aa41c19347"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(23, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show \"Red\"", null, null, "7de9e217e77f3c5bad367a5e3ec22fbb")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "f157917d2388ba549fb19aad4a8369fb")),
+                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(26, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[] {
+                                                    new global::Io.Cucumber.Messages.Types.Tag(new global::Io.Cucumber.Messages.Types.Location(25, new System.Nullable<long>(1)), "@automatic", "08a8d63447c8dd50ab086d4be4d6e81f")}), "Scenario", "Switch to Automatic modus", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(27, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "a4165aae8ac5d15e816d7e3e8f59d167"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(28, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the Automatic button", null, null, "888f30154ee0405aa807562b6f9ca8ae"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(29, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show different colors in a loop", null, null, "e608bcc1dd36085e81742e0e2c415525")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "82d4f7002bafab549bd038f56aa72b00")),
+                                new global::Io.Cucumber.Messages.Types.FeatureChild(null, null, new global::Io.Cucumber.Messages.Types.Scenario(new global::Io.Cucumber.Messages.Types.Location(32, new System.Nullable<long>(1)), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Tag>(new global::Io.Cucumber.Messages.Types.Tag[] {
+                                                    new global::Io.Cucumber.Messages.Types.Tag(new global::Io.Cucumber.Messages.Types.Location(31, new System.Nullable<long>(1)), "@stopautomatic", "3978e38062518d52a0351623c6b4a41e")}), "Scenario", "Stop Automatic modus", "", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Step>(new global::Io.Cucumber.Messages.Types.Step[] {
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(33, new System.Nullable<long>(5)), "Given ", global::Io.Cucumber.Messages.Types.StepKeywordType.CONTEXT, "the traffic light application is running", null, null, "7becd81dd6488654a2d9bbe698f1f26b"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(34, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the Automatic button", null, null, "9d03b2fd319143509bd0678c368a82a1"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(35, new System.Nullable<long>(5)), "When ", global::Io.Cucumber.Messages.Types.StepKeywordType.ACTION, "I click the Automatic button again", null, null, "326c7a14a275ae59b9679fdf9a342e42"),
+                                                    new global::Io.Cucumber.Messages.Types.Step(new global::Io.Cucumber.Messages.Types.Location(36, new System.Nullable<long>(5)), "Then ", global::Io.Cucumber.Messages.Types.StepKeywordType.OUTCOME, "the traffic light should show stop changing colors", null, null, "0763ac1b758c5f50890dc2f66631968d")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Examples>(new global::Io.Cucumber.Messages.Types.Examples[0]), "4c30f1b4f9707158bb46e682defff21c"))})), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Comment>(new global::Io.Cucumber.Messages.Types.Comment[0]));
         }
         
         private static global::System.Collections.Generic.IEnumerable<Io.Cucumber.Messages.Types.Pickle> PicklesFunc()
         {
             return new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.Pickle>(new global::Io.Cucumber.Messages.Types.Pickle[] {
-                        new global::Io.Cucumber.Messages.Types.Pickle("f12be35bb4de9d5fbf9f48cfa82e5e3c", "Features/TrafficLight.feature", "Switch to yellow", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
+                        new global::Io.Cucumber.Messages.Types.Pickle("984ae1415229e7598e99f31082286108", "Features/TrafficLight.feature", "Switch to yellow", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "6f0b35c386987a5889cc5783994f11a0"}), "ff0e9e138a69f358a4ba072653b3fcae", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
+                                                        "ce83b84bcd616159ab5b6cb92cde0b5d"}), "f85ad0f1d6788d5f82da6b159e8a9b91", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "baf7fbe07bdb9a59bec54aba199dd178"}), "a7e62e09576c205da394cdcf86aa7eef", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Yellow\" button"),
+                                                        "5d7f2e2143d8d458bbf6022aa5691e8b"}), "2bb5cf20197cca52ae2d0815a8b54ce9", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Yellow\" button"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "381735bf0847645f833a40c072793203"}), "2e247900c542a15a9f3c26c763e370b2", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show \"Yellow\"")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "0840ec3c1b8d3c509f9bc93bb279a1c9"})),
-                        new global::Io.Cucumber.Messages.Types.Pickle("cf0a83eb21e71a5a88b6248f9a4ed139", "Features/TrafficLight.feature", "Switch to green", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
+                                                        "410403e5b51db1538ecdad8633222d9c"}), "8cd57e35165ad15e830a85478b4f198c", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show \"Yellow\"")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[] {
+                                        new global::Io.Cucumber.Messages.Types.PickleTag("@yellow", "f9ef76f12167c851b879bb558ea45690")}), new System.Collections.Generic.List<string>(new string[] {
+                                        "5b14c93ed94359558ec0db19f4ee7985"})),
+                        new global::Io.Cucumber.Messages.Types.Pickle("a3edc656c0ce095ba6f095461d80ff97", "Features/TrafficLight.feature", "Switch to green", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "a15c49b4a628f25fb01dd6179419482e"}), "eb65ae9c1355cf52a18d1f85cb91f6be", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
+                                                        "ec7c679c1d68f757bc8ef16fcdbb3ec3"}), "c535fc04e1195c55a933faf8c157b669", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "8262fbac8229dd51ab5ddb78be76c92a"}), "55ca67695dd4515dbefc693aea657167", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Green\" button"),
+                                                        "eb44a913a411e9569f81aeb4fe7768c4"}), "7c82b3e9e81d7c5bb8cf5a57dac7e94f", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Green\" button"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "c7b6ec5c7e82085488452842cec8d531"}), "80d51a5cf0b6725388c5b01891f815be", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show \"Green\"")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "8a2f0d4718e09555b378e1b935c22ffd"})),
-                        new global::Io.Cucumber.Messages.Types.Pickle("7d89b6d0fae75f59b54bd093ae985e82", "Features/TrafficLight.feature", "Switch back to red", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
+                                                        "0e3e7d26654c1655980b47d45890294b"}), "50c85208e4ae4f5abfe5c9675e1f251a", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show \"Green\"")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[] {
+                                        new global::Io.Cucumber.Messages.Types.PickleTag("@green", "925d63ffddef1b5d9040caf79aadd13f")}), new System.Collections.Generic.List<string>(new string[] {
+                                        "aafc332aa5f706559f6fb24e9c867b66"})),
+                        new global::Io.Cucumber.Messages.Types.Pickle("562fd4623852c750b52f0915c194c178", "Features/TrafficLight.feature", "Switch back to red", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "14de3792e76a25559822576bbfae81a8"}), "677e09f6f6753d578fbdc900a66b0022", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
+                                                        "309e7f681e6c8d56955d5db099374670"}), "7ab170e77a57d8599046e59710eb397b", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "bf2a2ba823ad2753a68d173fa6f3374d"}), "b9bb7b49ea09ce509c2b3e3588f9d205", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Red\" button"),
+                                                        "9172e0f20bebb05eb84c42aa41c19347"}), "564d1697aed6135c93b3f0ce35cd7b00", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Red\" button"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "a36f9f20c6a0085bbd544f07dea3e837"}), "381e0ea02f7b3c558db3c73c22e7e62a", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show \"Red\"")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "bd872a69117dd25ca14fe27aa2beb1a3"})),
-                        new global::Io.Cucumber.Messages.Types.Pickle("0d31e2c7151411548186f615792f399d", "Features/TrafficLight.feature", "Switch to Automatic modus", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
+                                                        "7de9e217e77f3c5bad367a5e3ec22fbb"}), "682484fe485cb157bd236256314af3e1", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show \"Red\"")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[] {
+                                        new global::Io.Cucumber.Messages.Types.PickleTag("@red", "be0f8c0301741658a4de42dfdb47cbb2")}), new System.Collections.Generic.List<string>(new string[] {
+                                        "f157917d2388ba549fb19aad4a8369fb"})),
+                        new global::Io.Cucumber.Messages.Types.Pickle("03e4d8e6c41d84598626cf46eb4a846c", "Features/TrafficLight.feature", "Switch to Automatic modus", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "c84fb878ee164652a39aaf586ae33faf"}), "b32882c9f4958a54ad7ad9cedb863f0b", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
+                                                        "a4165aae8ac5d15e816d7e3e8f59d167"}), "24679cc43c408b54b28f4b13afc48264", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "bb5fc00fcc7a8959bbf86ff7d18b9d96"}), "fd60fb7d9e64375da3da71911c9932e2", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the Automatic button"),
+                                                        "888f30154ee0405aa807562b6f9ca8ae"}), "abc9517833ca9855a647863118ef1035", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the Automatic button"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "84b1aa2e4287db5b8e7ccf001c5bbae0"}), "8804820a484afe5792ffd925d8f9de8c", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show different colors in a loop")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "bdaff63e6f26bc519cc0b59c1aa3cfee"})),
-                        new global::Io.Cucumber.Messages.Types.Pickle("94f76b096db8865287ee5d38b6ee3ef5", "Features/TrafficLight.feature", "Stop Automatic modus", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
+                                                        "e608bcc1dd36085e81742e0e2c415525"}), "15415a89bb62cf53aecf46c2822a6469", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show different colors in a loop")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[] {
+                                        new global::Io.Cucumber.Messages.Types.PickleTag("@automatic", "08a8d63447c8dd50ab086d4be4d6e81f")}), new System.Collections.Generic.List<string>(new string[] {
+                                        "82d4f7002bafab549bd038f56aa72b00"})),
+                        new global::Io.Cucumber.Messages.Types.Pickle("4c39ff478743be5e8c907876984321a5", "Features/TrafficLight.feature", "Stop Automatic modus", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "ddb88b76912b1056b7a9ee8abce79e81"}), "1e9804902870e556afb2e813c681b9f8", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
+                                                        "7becd81dd6488654a2d9bbe698f1f26b"}), "822a2efa2549e95ab9c3e76c5605e71e", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the traffic light application is running"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "cbe052bff443b45596891702666da5ee"}), "e6e33c14e739cd5fa3f8fee6a4f9566f", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the Automatic button"),
+                                                        "9d03b2fd319143509bd0678c368a82a1"}), "730f9cdc49c41f5db8d3f53f6f734db0", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the Automatic button"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "3ff3af4c84c6795eb754e9f123ab451b"}), "d65d2bd6993e32598ca91dee048cc721", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the Automatic button again"),
+                                                        "326c7a14a275ae59b9679fdf9a342e42"}), "d580941e76af7256b87dd0104e303d66", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the Automatic button again"),
                                         new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "64de5e51af3cef59ad9727a20a199c4f"}), "693f86ed1ccb955c85f2d6097e000b13", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show stop changing colors")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "97146eadaa92995c914545a8abcfaf63"})),
-                        new global::Io.Cucumber.Messages.Types.Pickle("577e6bd55922a95cb7c015042639d763", "Features/TrafficLight.feature", "UI smoke test application starts", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
-                                        new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "d4316a40573eb051883d25d538101e4f"}), "9a7080d464ecbe56a502218fddf6a22b", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the WPF application is started"),
-                                        new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "b85fdb710f42515ebb490fb6b0b2286c"}), "6a8397355c975f58bd6689f2ae29e27a", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the main window should be visible")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "92c3817f6c1a9d57beb0a661b554f34b"})),
-                        new global::Io.Cucumber.Messages.Types.Pickle("87fcb7a6c7b7bc5495555c2ab2c902c0", "Features/TrafficLight.feature", "UI smoke test application starts and click the Green Button", "en-US", new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleStep>(new global::Io.Cucumber.Messages.Types.PickleStep[] {
-                                        new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "11480315251b6f54bd2530657f78e29d"}), "0c740006a842935cabfc70b56cc292b2", global::Io.Cucumber.Messages.Types.PickleStepType.CONTEXT, "the WPF application is started"),
-                                        new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "3e3e8ce773efc05ca4afd933d270c7d3"}), "029a947ccd0ef25aa0fb74dc14d1a326", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the main window should be visible"),
-                                        new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "fd068f9ffc33f55c8fea6297c1cd1fa2"}), "d21e72357e3b2a5b8c20c5dfdc409416", global::Io.Cucumber.Messages.Types.PickleStepType.ACTION, "I click the \"Green\" button"),
-                                        new global::Io.Cucumber.Messages.Types.PickleStep(null, new System.Collections.Generic.List<string>(new string[] {
-                                                        "8df114ce0bf86d5bbb09047cc54fad12"}), "e7d796c7bbdb33589e66071c5e4e490d", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the color green will be shown on the the traffic")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[0]), new System.Collections.Generic.List<string>(new string[] {
-                                        "49d02492ab08605b8014fc07d5a6db5d"}))});
+                                                        "0763ac1b758c5f50890dc2f66631968d"}), "5c53453e24bbb055a9f95bc4d78b1ead", global::Io.Cucumber.Messages.Types.PickleStepType.OUTCOME, "the traffic light should show stop changing colors")}), new System.Collections.Generic.List<global::Io.Cucumber.Messages.Types.PickleTag>(new global::Io.Cucumber.Messages.Types.PickleTag[] {
+                                        new global::Io.Cucumber.Messages.Types.PickleTag("@stopautomatic", "3978e38062518d52a0351623c6b4a41e")}), new System.Collections.Generic.List<string>(new string[] {
+                                        "4c30f1b4f9707158bb46e682defff21c"}))});
         }
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
@@ -255,15 +236,17 @@ Scenario: UI smoke test application starts and click the Green Button
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Switch to yellow")]
+        [global::NUnit.Framework.CategoryAttribute("yellow")]
         public async global::System.Threading.Tasks.Task SwitchToYellow()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "yellow"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Switch to yellow", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -273,13 +256,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 8
+#line 9
     await testRunner.GivenAsync("the traffic light application is running", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 9
+#line 10
     await testRunner.WhenAsync("I click the \"Yellow\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 11
     await testRunner.ThenAsync("the traffic light should show \"Yellow\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -288,15 +271,17 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Switch to green")]
+        [global::NUnit.Framework.CategoryAttribute("green")]
         public async global::System.Threading.Tasks.Task SwitchToGreen()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "green"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "1";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Switch to green", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 12
+#line 14
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -306,13 +291,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 13
+#line 15
     await testRunner.GivenAsync("the traffic light application is running", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 16
     await testRunner.WhenAsync("I click the \"Green\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 15
+#line 17
     await testRunner.ThenAsync("the traffic light should show \"Green\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -321,15 +306,17 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Switch back to red")]
+        [global::NUnit.Framework.CategoryAttribute("red")]
         public async global::System.Threading.Tasks.Task SwitchBackToRed()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "red"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "2";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Switch back to red", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 17
+#line 20
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -339,13 +326,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 18
+#line 21
     await testRunner.GivenAsync("the traffic light application is running", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 19
+#line 22
     await testRunner.WhenAsync("I click the \"Red\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 20
+#line 23
     await testRunner.ThenAsync("the traffic light should show \"Red\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -354,15 +341,17 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Switch to Automatic modus")]
+        [global::NUnit.Framework.CategoryAttribute("automatic")]
         public async global::System.Threading.Tasks.Task SwitchToAutomaticModus()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "automatic"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "3";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Switch to Automatic modus", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 22
+#line 26
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -372,13 +361,13 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 23
+#line 27
     await testRunner.GivenAsync("the traffic light application is running", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 28
     await testRunner.WhenAsync("I click the Automatic button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 29
     await testRunner.ThenAsync("the traffic light should show different colors in a loop", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
@@ -387,15 +376,17 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
         
         [global::NUnit.Framework.TestAttribute()]
         [global::NUnit.Framework.DescriptionAttribute("Stop Automatic modus")]
+        [global::NUnit.Framework.CategoryAttribute("stopautomatic")]
         public async global::System.Threading.Tasks.Task StopAutomaticModus()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "stopautomatic"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "4";
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Stop Automatic modus", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 27
+#line 32
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -405,83 +396,17 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 28
+#line 33
     await testRunner.GivenAsync("the traffic light application is running", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 29
+#line 34
     await testRunner.WhenAsync("I click the Automatic button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 30
+#line 35
     await testRunner.WhenAsync("I click the Automatic button again", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 31
-    await testRunner.ThenAsync("the traffic light should show stop changing colors", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("UI smoke test application starts")]
-        public async global::System.Threading.Tasks.Task UISmokeTestApplicationStarts()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            string pickleIndex = "5";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("UI smoke test application starts", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
-            string[] tagsOfRule = ((string[])(null));
-            global::Reqnroll.RuleInfo ruleInfo = null;
-#line 34
-this.ScenarioInitialize(scenarioInfo, ruleInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                await testRunner.SkipScenarioAsync();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 35
-    await testRunner.GivenAsync("the WPF application is started", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
 #line 36
-    await testRunner.ThenAsync("the main window should be visible", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("UI smoke test application starts and click the Green Button")]
-        public async global::System.Threading.Tasks.Task UISmokeTestApplicationStartsAndClickTheGreenButton()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            string pickleIndex = "6";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("UI smoke test application starts and click the Green Button", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
-            string[] tagsOfRule = ((string[])(null));
-            global::Reqnroll.RuleInfo ruleInfo = null;
-#line 38
-this.ScenarioInitialize(scenarioInfo, ruleInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                await testRunner.SkipScenarioAsync();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 39
-    await testRunner.GivenAsync("the WPF application is started", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 40
-    await testRunner.ThenAsync("the main window should be visible", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-#line 41
-    await testRunner.WhenAsync("I click the \"Green\" button", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 42
-    await testRunner.ThenAsync("the color green will be shown on the the traffic", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.ThenAsync("the traffic light should show stop changing colors", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

@@ -7,6 +7,7 @@ using FlaUI.Core.Tools;
 using System.IO;
 
 [TestFixture]
+[Category("UI")]
 public class TrafficLightUiSmokeTests
 {
     private Application? _app;
