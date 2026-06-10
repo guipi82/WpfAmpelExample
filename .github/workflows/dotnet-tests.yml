@@ -1,54 +1,46 @@
 name: WPF Ampel Tests
 
 on:
-push:
-branches: [ main ]
-
-pull_request:
-branches: [ main ]
-
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 env:
-FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
-build-and-test:
-runs-on: windows-2025
+  build-and-test:
+    runs-on: windows-2025
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  - name: Setup .NET
-    uses: actions/setup-dotnet@v4
-    with:
-      dotnet-version: '10.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
 
-  - name: Restore dependencies
-    run: dotnet restore
+      - name: Restore dependencies
+        run: dotnet restore
 
-  - name: Build solution
-    run: dotnet build --configuration Debug --no-restore
+      - name: Build solution
+        run: dotnet build --configuration Debug --no-restore
 
-  - name: Run tests
-    run: |
-      dotnet test .\Ampel.Tests\Ampel.Tests.csproj `
-      --configuration Debug `
-      --no-build `
-      --logger "trx;LogFileName=test-results.trx" `
-      --results-directory TestResults
+      - name: Run tests
+        run: dotnet test .\Ampel.Tests\Ampel.Tests.csproj --configuration Debug --no-build --logger "trx;LogFileName=test-results.trx"--results-directory TestResults
 
-  - name: Upload test results
-    if: always()
-    uses: actions/upload-artifact@v4
-    with:
-      name: test-results
-      path: TestResults/*.trx
-      if-no-files-found: ignore
-
-  - name: Upload screenshots
-    if: always()
-    uses: actions/upload-artifact@v4
-    with:
-      name: screenshots
-      path: '**/Screenshots/*.png'
-      if-no-files-found: ignore
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: '**/TestResults/*.trx'
+          if-no-files-found: ignore
+          
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: '**/Screenshots/*.png'
+          if-no-files-found: ignore
