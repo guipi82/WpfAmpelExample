@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfAmpelExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:WpfAmpelExample.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WpfAmpelExample.ViewModels"
+        Title="WPF Workshop Automation"
+        Width="320"
+        SizeToContent="Height"
+        mc:Ignorable="d">
+
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
+    <StackPanel AutomationProperties.AutomationId="121312323123123123213123123123213123123213">
+        <controls:AmpelControl x:Name="AmpelControl2"
+                               Margin="16,16,16,0"
+                               AktuellesAmpelLicht="{Binding AktuellesAmpelLicht}"
+                               AutomationProperties.AutomationId="AmpelControl"
+                               Style="{StaticResource AmpelControlStyle}" />
+
+        <Grid Margin="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Height="24"
+                    AutomationProperties.AutomationId="GreenButton"
+                    Command="{Binding GreenCommand}"
+                    Content="Green" />
+            <Button Grid.Column="1"
+                    Height="24"
+                    AutomationProperties.AutomationId="YellowButton"
+                    Command="{Binding YellowCommand}"
+                    Content="Yellow" />
+            <Button Grid.Column="2"
+                    Height="24"
+                    AutomationProperties.AutomationId="RedButton"
+                    Command="{Binding RedCommand}"
+                    Content="Red" />
+        </Grid>
+
+        <Button Height="24"
+                Margin="16,0,16,16"
+                AutomationProperties.AutomationId="AutomaticButton"
+                Command="{Binding AutomaticCommand}"
+                Content="Automatic" />
+    </StackPanel>
+</Window>
+

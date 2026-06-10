@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAmpelExample", "WpfAmpelExample\WpfAmpelExample.csproj", "{5D3F5A7E-360E-41B4-AA7F-E81722A768EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D3F5A7E-360E-41B4-AA7F-E81722A768EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3F5A7E-360E-41B4-AA7F-E81722A768EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3F5A7E-360E-41B4-AA7F-E81722A768EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3F5A7E-360E-41B4-AA7F-E81722A768EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
