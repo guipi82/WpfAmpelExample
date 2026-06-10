@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Debug --no-restore
 
       - name: Run tests
-        run: dotnet test .\WpfAmpelExample\WpfAmpelExample\Ampel.Tests\Ampel.Tests.csproj --configuration Debug --no-build --logger "trx;LogFileName=test-results.trx"
+        run: dotnet test .\Ampel.Tests\Ampel.Tests.csproj --configuration Debug --no-build --logger "trx;LogFileName=test-results.trx"
 
       - name: Upload test results
         if: always()
