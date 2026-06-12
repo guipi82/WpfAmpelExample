@@ -72,20 +72,19 @@ namespace Ampel.Tests.Steps
         [Then("the traffic light should show different colors in a loop")]
         public async Task ThenWirdDerAmpelzustandInLoopAngezeigt()
         {
-            var first = _driver!.AktuellesAmpelLicht;
+            _driver.Should().NotBeNull();
 
-            await Task.Delay(1500);
-            var second = _driver.AktuellesAmpelLicht;
+            //Speichere alle beobachteten Ampelfarben,aber jede Farbe nur einmal.                 
+            var observedColors = new HashSet<AmpelLicht>();
 
-            await Task.Delay(1500);
-            var third = _driver.AktuellesAmpelLicht;
+            for (int i = 0; i < 8; i++)
+            {
+                observedColors.Add(_driver!.AktuellesAmpelLicht);
+                await Task.Delay(1100);
+            }
 
-            var changed =
-                first != second ||
-                second != third ||
-                first != third;
-
-            changed.Should().BeTrue("the automatic mode should eventually change the traffic light color");
+            observedColors.Count.Should().BeGreaterThan(1,
+                "the automatic mode should change the traffic light color over time");
 
         }
 
