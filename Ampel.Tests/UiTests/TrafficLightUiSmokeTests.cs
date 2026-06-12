@@ -61,9 +61,10 @@ public class TrafficLightUiSmokeTests
         var greenButton = Retry.WhileNull(() => _window.FindFirstDescendant(cf => cf.ByAutomationId("GreenButton")),TimeSpan.FromSeconds(5));
         greenButton.Result.Should().NotBeNull();
         TakeScreenshot("Before_Green_Click");
+        //feste wartezeit um die Farbe Ändderung zu sehen
         Thread.Sleep(1000);
         greenButton.Result!.AsButton().Invoke();
-        //Warten bis der Ampelcontrol angezeigt wird
+        //prüfen, ob das Ampelcontrol weiterhin vorhanden ist
         var ampelcontrol = Retry.WhileNull(() => _window.FindFirstDescendant(cf => cf.ByAutomationId("AmpelControl")), TimeSpan.FromSeconds(5));
         ampelcontrol.Should().NotBeNull();
         TakeScreenshot("After_Green_Click");
@@ -90,9 +91,10 @@ public class TrafficLightUiSmokeTests
         var redButton = Retry.WhileNull(() => _window.FindFirstDescendant(cf => cf.ByAutomationId("RedButton")), TimeSpan.FromSeconds(5));
         redButton.Result.Should().NotBeNull();
         TakeScreenshot("Before_Red_Click");
+        //feste wartezeit um die Farbe Ändderung zu sehen
         Thread.Sleep(1000);
         redButton.Result!.AsButton().Invoke();
-        //Warten bis der Ampelcontrol angezeigt wird
+        //prüfen, ob das Ampelcontrol weiterhin vorhanden ist
         var ampelcontrol = Retry.WhileNull(() => _window.FindFirstDescendant(cf => cf.ByAutomationId("AmpelControl")), TimeSpan.FromSeconds(5));
         ampelcontrol.Should().NotBeNull();
         TakeScreenshot("After_Red_Click");
