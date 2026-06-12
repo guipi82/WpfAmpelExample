@@ -52,7 +52,6 @@ namespace Ampel.Tests.Steps
         public void WhenIchAufAutomaticNochmalKlicke()
         {
             _driver.Should().NotBeNull();
-            //_driver.AutomaticCommand.Execute(null);
             _driver.AutomaticCommand.Execute(null); // stop automatic loop
         }
 
